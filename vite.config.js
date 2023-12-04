@@ -1,5 +1,7 @@
+/** @type {import('vite').UserConfig} */
 export default {
-    build: {
-      assetsInlineLimit: 0,
-    },
-  };
+	base: '/acestream-links/',
+	build: {
+		assetsInlineLimit: 0,
+	},
+};
