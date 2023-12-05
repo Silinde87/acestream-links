@@ -2,7 +2,7 @@
 
 interface ImportMetaEnv {
 	readonly VITE_APP_PASSWORD: string;
-	// more env variables...
+	readonly VITE_FIREBASE_DB_URL: string;
 }
 
 interface ImportMeta {
