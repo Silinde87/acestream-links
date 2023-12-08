@@ -18,7 +18,8 @@ const useLinks = () => {
 			const response = await get(child(dbRef, 'links'));
 			setLinks(response.val());
 		};
-		validate() && fetchLinks();
+		// validate() && fetchLinks();
+		fetchLinks();
 	}, []);
 
 	return links;
