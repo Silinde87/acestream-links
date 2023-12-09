@@ -1,12 +1,21 @@
 import { TLink } from '../../types/links';
 
-export type TTable = {
+export type TTableRow = 'name' | 'hash' | 'channel' | 'competition' | 'language' | 'sport' | 'video_quality';
+
+export type TOrderType = 'asc' | 'desc';
+
+export type TTableProps = {
 	links: TLink[];
 };
 
-export type TTableCell = {
+export type TTableCellProps = {
 	text?: string;
+	value?: TTableRow;
 	as: 'th' | 'td';
-	hasSortIcon?: boolean;
+	hasOrderIcon?: boolean;
 	children?: React.ReactNode;
+};
+
+export type TOrderButtonProps = {
+	onClick: (orderType: TOrderType) => void;
 };

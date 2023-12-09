@@ -1,8 +1,9 @@
+import { useContext } from 'react';
 import Table from '../components/Table/Table';
-import useLinks from '../hooks/useLinks';
+import { LinksContext } from '../providers/LinksProvider';
 
 const LinksPage: React.FC = () => {
-	const links = useLinks();
+	const { links } = useContext(LinksContext);
 
 	return (
 		<section>

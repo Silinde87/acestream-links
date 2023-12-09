@@ -1,8 +1,9 @@
 import { ReactNode } from 'react';
-import { TTable } from './Table.types';
+import { TTableProps } from './Table.types';
 import TableCell from './components/TableCell';
+import { TABLE_ROW } from '../../utils/table';
 
-const Table: React.FC<TTable> = ({ links }) => {
+const Table: React.FC<TTableProps> = ({ links }) => {
 	const renderRow = (): ReactNode => {
 		return links.map((link, index) => (
 			<tr key={`table-link-${index}`}>
@@ -23,13 +24,13 @@ const Table: React.FC<TTable> = ({ links }) => {
 		<table className="max-w-4xl min-w-[56rem] border-collapse mt-8 mx-auto">
 			<thead>
 				<tr>
-					<TableCell text="Name" as="th" hasSortIcon />
-					<TableCell text="Hash" as="th" hasSortIcon />
-					<TableCell text="Channel" as="th" hasSortIcon />
-					<TableCell text="Competition" as="th" hasSortIcon />
-					<TableCell text="Language" as="th" hasSortIcon />
-					<TableCell text="Sport" as="th" hasSortIcon />
-					<TableCell text="Quality" as="th" hasSortIcon />
+					<TableCell text={TABLE_ROW.NAME} value="name" as="th" hasOrderIcon />
+					<TableCell text={TABLE_ROW.HASH} value="hash" as="th" hasOrderIcon />
+					<TableCell text={TABLE_ROW.CHANNEL} value="channel" as="th" hasOrderIcon />
+					<TableCell text={TABLE_ROW.COMPETITION} value="competition" as="th" hasOrderIcon />
+					<TableCell text={TABLE_ROW.LANGUAGE} value="language" as="th" hasOrderIcon />
+					<TableCell text={TABLE_ROW.SPORT} value="sport" as="th" hasOrderIcon />
+					<TableCell text={TABLE_ROW.VIDEO_QUALITY} value="video_quality" as="th" hasOrderIcon />
 				</tr>
 			</thead>
 			<tbody>{renderRow()}</tbody>
