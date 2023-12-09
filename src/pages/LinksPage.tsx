@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import Table from '../components/Table/Table';
-import { LinksContext } from '../providers/LinksProvider';
+import { Table } from 'src/components';
+import { LinksContext } from 'src/providers/LinksProvider';
 
 const LinksPage: React.FC = () => {
 	const { links } = useContext(LinksContext);

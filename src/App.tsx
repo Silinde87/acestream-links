@@ -1,4 +1,4 @@
-import LinksPage from './pages/LinksPage';
+import { LinksPage } from './pages';
 import { LinksProvider } from './providers';
 
 const App = () => {

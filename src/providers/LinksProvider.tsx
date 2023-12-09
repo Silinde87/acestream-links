@@ -2,10 +2,10 @@ import { PropsWithChildren, createContext, useEffect, useState } from 'react';
 import _orderBy from 'lodash.orderby';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, get, ref, child } from 'firebase/database';
-import { TLink } from '../types/links';
-import { TOrderType, TTableRow } from '../components/Table/Table.types';
-import { FIREBASE_OPTIONS } from '../utils/firebase';
-import { validate } from '../utils/validation';
+import { TOrderType, TTableRow } from 'src/components/Table/Table.types';
+import { TLink } from 'src/utils/types/links';
+import { FIREBASE_OPTIONS } from 'src/utils/firebase';
+import { validate } from 'src/utils/validation';
 
 interface ILinksState {
 	links: TLink[];

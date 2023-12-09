@@ -1,7 +1,7 @@
 import { useContext } from 'react';
+import { LinksContext } from 'src/providers/LinksProvider';
 import { TOrderType, TTableCellProps } from '../Table.types';
 import OrderButton from './OrderButton';
-import { LinksContext } from '../../../providers/LinksProvider';
 
 const TableCell: React.FC<TTableCellProps> = ({ text, value, as, hasOrderIcon, children }) => {
 	const CellComponent = as;

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ChevronUp from './../../../../public/chevron-up.svg';
+import ChevronUp from 'src/assets/chevron-up.svg';
 import { TOrderButtonProps } from '../Table.types';
 
 const OrderButton: React.FC<TOrderButtonProps> = ({ onClick }) => {

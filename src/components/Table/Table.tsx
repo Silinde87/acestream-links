@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
+import { TABLE_ROW } from 'src/utils/table';
 import { TTableProps } from './Table.types';
 import TableCell from './components/TableCell';
-import { TABLE_ROW } from '../../utils/table';
 
 const Table: React.FC<TTableProps> = ({ links }) => {
 	const renderRow = (): ReactNode => {

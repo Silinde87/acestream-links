@@ -1,4 +1,4 @@
-import { TLink } from '../../types/links';
+import { TLink } from 'src/utils/types/links';
 
 export type TTableRow = 'name' | 'hash' | 'channel' | 'competition' | 'language' | 'sport' | 'video_quality';
 
