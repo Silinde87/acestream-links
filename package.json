@@ -29,7 +29,8 @@
   "author": "Pau Rodriguez",
   "license": "ISC",
   "dependencies": {
-    "firebase": "^10.7.0",
+    "@upstash/redis": "^1.25.2",
+    "axios": "^1.6.2",
     "lodash.orderby": "^4.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
