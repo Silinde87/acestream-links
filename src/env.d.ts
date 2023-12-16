@@ -2,7 +2,8 @@
 
 interface ImportMetaEnv {
 	readonly VITE_APP_PASSWORD: string;
-	readonly VITE_FIREBASE_DB_URL: string;
+	readonly VITE_UPSTASH_REST_TOKEN: string;
+	readonly VITE_UPSTASH_REST_URL: string;
 }
 
 interface ImportMeta {

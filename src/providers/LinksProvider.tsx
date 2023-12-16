@@ -1,11 +1,9 @@
 import { PropsWithChildren, createContext, useEffect, useState } from 'react';
 import _orderBy from 'lodash.orderby';
-import { initializeApp } from 'firebase/app';
-import { getDatabase, get, ref, child } from 'firebase/database';
 import { TOrderType, TTableRow } from 'src/components/Table/Table.types';
 import { TLink } from 'src/utils/types/links';
-import { FIREBASE_OPTIONS } from 'src/utils/firebase';
 import { validate } from 'src/utils/validation';
+import LinksServices from 'src/services/links.services';
 
 interface ILinksState {
 	links: TLink[];
@@ -19,10 +17,8 @@ export const LinksProvider: React.FC<PropsWithChildren<object>> = ({ children })
 
 	useEffect(() => {
 		const fetchLinks = async () => {
-			const app = initializeApp(FIREBASE_OPTIONS);
-			const dbRef = ref(getDatabase(app));
-			const response = await get(child(dbRef, 'links'));
-			setLinks(response.val());
+			const links = await LinksServices.getLinks();
+			setLinks(links);
 		};
 		validate() && fetchLinks();
 	}, []);
